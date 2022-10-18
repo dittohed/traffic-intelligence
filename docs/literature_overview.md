@@ -14,6 +14,14 @@
 * genetic algorithms are most prevalent among evolutionary algorithms;
 * for evolutionary algorithms: green times vector for each phase are the most popular decision variables, the most picked objective to minimize is the time delay (either as a single objective or within multiple objectives), some modifications of standard GA are used (NSGA which modifies the selection operator), differential evolution and genetic programming methods are used as well.
 
-### Paper no. 2
-* information 1;
-* information 2.
+### Signal Timing Determination Using Genetic Algorithms (1992)
+* a foundational paper on applying GA for traffic signal control;
+* GA always follow the same rules, only chromosome coding and fitness function are problem-dependent;
+* defines a typical workflow (having some traffic statistics: initialize a population -> run the GA loop, use simulation for evaluating the members);
+* GA can serve as a dynamic system given that it's run repeatedly.
+
+### Intelligent Intersection Control for Delay Optimization: Using Meta-Heuristic Search Algorithms (2020)
+* compares GA (better optimum) with DE (faster);
+* uses data gathered for 2 intersections in Saudi Arabia;
+* uses average delay as the objective, green splits as decision variables, some constraints for green splits and cycle time;
+* simulation is run based on the flow rate (vehicles per hour).
