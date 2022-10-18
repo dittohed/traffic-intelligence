@@ -9,10 +9,27 @@
 
 # Papers
 ### A Review on Swarm Intelligence and Evolutionary Algorithms for Solving the Traffic Signal Control Problem (2020)
+* problem formulation and parameters
+
+| **Network**             | **Intersection**        | **Roundabouts**         | **Lights**         |
+|-------------------------|-------------------------|-------------------------|--------------------|
+| Vehicle Flow            | Vehicle Delays          | Travel Time Delay       | Queue Length       |
+| Traffic Throughput Rate | Stop-and-Wait Times     | Cycle Times             | Green Times        |
+| Queue Lenght            | Vehicle Stops           | Vehicle Time Delay      | Mean Travel Time   |
+| Stop-and-Wait Times     | Traffic Throughput Rate | Traffic Throughput Rate | Cycle Time         |
+| Congestion in Links     | Travel Time             | Roundabout Size         | Vehicle Stops      |
+| Travel Time             | Queue Lenght            |                         | Vehicle Stop Times |
+| Vehicle Delay           | Vehicle Capacity        |                         |                    |
+
 * algorithms inspired by nature has been applied for solving the TSC problem for 2 decades;
 * evaluation (fitness function calculation) is done using a simulation;
 * genetic algorithms are most prevalent among evolutionary algorithms;
 * for evolutionary algorithms: green times vector for each phase are the most popular decision variables, the most picked objective to minimize is the time delay (either as a single objective or within multiple objectives), some modifications of standard GA are used (NSGA which modifies the selection operator), differential evolution and genetic programming methods are used as well.
+* swarm algorithms do not require any prior information about the search space characteristics
+* particle swarm optimization is most prevalent among swarm intelligence algorithms;
+* a significant number of papers present PSO algorithms which exhibit a faster convergence rate and less total delay than GA algorithms;
+* the majority of reported PSO approaches optimize the average delay or total travelling time;
+* ant colony optimization algorithms are less popular than particle swarm optimization and tend to optimize the total throughput
 
 ### Signal Timing Determination Using Genetic Algorithms (1992)
 * a foundational paper on applying GA for traffic signal control;
