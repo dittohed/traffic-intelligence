@@ -42,3 +42,14 @@
 * uses data gathered for 2 intersections in Saudi Arabia;
 * uses average delay as the objective, green splits as decision variables, some constraints for green splits and cycle time;
 * simulation is run based on the flow rate (vehicles per hour).
+
+### Multi-objective optimization of urban road intersection signal timing based on particle swarm optimization algorithm (2019)
+* in addition to traditional TSC optimization goals such as throughput, delay and queue lengh, modern publications pay attention to vehicle emissions and vehicle energy consumption;
+* proposes a multi-objective approach
+* how to gain Pareto frontier fast plays a key role in evolutionary multi-objective optimization;
+
+### Urban Werea Traffic Signal Timing Optimization based on Sa-PSO (2010)
+* Simulated annealing-particle swarm optimization has been proved to be an effective way to deal with optimization through simulation;
+* SA was used to initialize the particle swarm
+* the global best point is accepted according to the probability function exp(|Pi - Pg| / T)
+* with the temperature cooling down, the Sa-PSO degenerates to PSO
