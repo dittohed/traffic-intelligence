@@ -1,3 +1,5 @@
+# Part I: literature overview
+
 # List of useful terms
 - *compatible streams* - two compatible streams of cars can safely cross the intersection simultaneously.
 - *stage / phase* - traffic light signals allowing a predefined compatible traffic streams to cross the intersection simultaneously.
@@ -24,12 +26,12 @@
 * algorithms inspired by nature has been applied for solving the TSC problem for 2 decades;
 * evaluation (fitness function calculation) is done using a simulation;
 * genetic algorithms are most prevalent among evolutionary algorithms;
-* for evolutionary algorithms: green times vector for each phase are the most popular decision variables, the most picked objective to minimize is the time delay (either as a single objective or within multiple objectives), some modifications of standard GA are used (NSGA which modifies the selection operator), differential evolution and genetic programming methods are used as well.
-* swarm algorithms do not require any prior information about the search space characteristics
+* for evolutionary algorithms: green times vector for each phase are the most popular decision variables, the most picked objective to minimize is the time delay (either as a single objective or within multiple objectives), some modifications of standard GA are used (NSGA which modifies the selection operator), differential evolution and genetic programming methods are used as well;
+* swarm algorithms do not require any prior information about the search space characteristics;
 * particle swarm optimization is most prevalent among swarm intelligence algorithms;
 * a significant number of papers present PSO algorithms which exhibit a faster convergence rate and less total delay than GA algorithms;
 * the majority of reported PSO approaches optimize the average delay or total travelling time;
-* ant colony optimization algorithms are less popular than particle swarm optimization and tend to optimize the total throughput
+* ant colony optimization algorithms are less popular than particle swarm optimization and tend to optimize the total throughput.
 
 ### Signal Timing Determination Using Genetic Algorithms (1992)
 * a foundational paper on applying GA for traffic signal control;
@@ -45,11 +47,27 @@
 
 ### Multi-objective optimization of urban road intersection signal timing based on particle swarm optimization algorithm (2019)
 * in addition to traditional TSC optimization goals such as throughput, delay and queue lengh, modern publications pay attention to vehicle emissions and vehicle energy consumption;
-* proposes a multi-objective approach
-* how to gain Pareto frontier fast plays a key role in evolutionary multi-objective optimization;
+* proposes a multi-objective approach;
+* how to gain Pareto frontier fast plays a key role in evolutionary multi-objective optimization.
 
 ### Urban Werea Traffic Signal Timing Optimization based on Sa-PSO (2010)
-* Simulated annealing-particle swarm optimization has been proved to be an effective way to deal with optimization through simulation;
-* SA was used to initialize the particle swarm
-* the global best point is accepted according to the probability function exp(|Pi - Pg| / T)
-* with the temperature cooling down, the Sa-PSO degenerates to PSO
+* simulated annealing-particle swarm optimization has been proved to be an effective way to deal with optimization through simulation;
+* SA was used to initialize the particle swarm;
+* the global best point is accepted according to the probability function exp(|Pi - Pg| / T);
+* with the temperature cooling down, the Sa-PSO degenerates to PSO.
+
+# Conclusions
+
+* both evolutionary and swarm intelligence algorithms utilize the same optimization
+framework (1. Initalize population, 2. Evaluate initial solutions using simulation 3. Generate new solutions 4. Evaluate the new solutions using simulation 5. Update population 6. Terminate or repeat starting from point 2);
+* the most picked objective is to minimize the time delay for junctions;
+* PSO typically exhibit a faster convergence rate and less total delay than GA algorithms;
+* there hasn't been that much progress in the last 30 years;
+* Reinforcement Learning is the new alternative to metaheuristics in terms of traffic signal control;
+* in order to obtain a demand-responsive control system, one has to gather traffic statistics (e.g. using induction loops
+or cameras) on a frequent basis (e.g. every 10 minutes), then simulate and optimize it;
+* **project topic proposal: Comparing**
+**optimal traffic control solution characterics obtained with PSO algorithm**
+**when using micro- and mesoscopic traffic flow simulators under the hood for**
+**large-scale (Cracow) simulation.**
+
