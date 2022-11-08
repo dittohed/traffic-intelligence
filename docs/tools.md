@@ -14,18 +14,65 @@ They provide a detailed simulation at cost of speed.
 ### SUMO
 https://www.eclipse.org/sumo/
 
-TODO: general overview (files, netconvert, traffic generator, Python interface), single-core + low
-RAM usage, demo, parallel simulations, shuffle
+SUMO (Simulation of Urban MObility) is an open source, microscopic traffic simulation package 
+developed by the German Aerospace Center and community users.
+
+It's been developed since 2001, has a detailed documentation and gathered 
+a wide community.
+
+**Tools**
+
+SUMO package consists of multiple tools, some of them being:
+
+* `netedit` - a graphical tool for building and editing networks + specyfing
+traffic (demand);
+* `sumo-gui` - a graphical tool for running and visualizing simulation live;
+* `sumo` - a non-graphical counterpart of sumo-gui;
+* `netconvert` - a command-line tool for converting OSM to SUMO networks; 
+* `traci` - a Python library for running, investigating and controlling
+simulations;
+* random traffic generator - a command-line tool for generating random traffic
+given input network.
+
+**Files defining a simulation**
+
+3 files has to be provided in order to run a simulation using Python:
+
+* `*.net.xml` file - defines the network topology (lanes, roads, junctions) along with
+auxiliary attributes (e.g. speed limits, traffic light phases);
+* `*.rou.xml` file - defines the traffic (a sequence of vehicle where each one
+has it's corresponding spawn time and a route);
+* `*.sumocfg` file - simply zips `*.net.xml` and *.rou.xml` files.
+
+**Performance**
+
+According to the documentation, SUMO simulation runs on a single core and there's
+no support for multi-node parallelization yet. However, it's possible to control
+multiple simulations from a single script using traci.
+
+RAM usage for Cracow simulation with a reasonable traffic is relatively low 
+(~1.2GB for almost 60,000 vehicles) and can be seamlessly run using cheap Intel CPU.
+
+It seeems that what constitutes a bottleneck is the random traffic generation 
+(followed by routes verification). A simple solution for running multiple, random
+simulations in an efficient manner would be to generate one bigger `*.rou.xml` file
+in advance, then sample from it.
+
+**Demo**
+
+See the [corresponding directory](../demos/sumo/).
 
 ### SMARTS
 https://projects.eng.unimelb.edu.au/smarts/
 
-SMARTS (Scalable Microscopic Adaptive Road Traffic Simulator) is a flexible  microscopic traffic simulator developed at the School of Computing and Information Systems, University of Melbourne.
+SMARTS (Scalable Microscopic Adaptive Road Traffic Simulator) is a flexible microscopic traffic simulator developed at the School of Computing and Information Systems, University of Melbourne.
 
 It's main advantage is a capability to run distributed simulations. However,
 it doesn't seem to have as wide community and as detailed documentation as SUMO.
 
-Therefore we decided to pick SUMO as the microscopic simulator.
+### Decision
+As we're already slightly familiar with SUMO (which has a broader community and
+more detailed documentation), we decided to pick SUMO as the microscopic simulator.
 
 # Mesoscopic simulators
 ...
