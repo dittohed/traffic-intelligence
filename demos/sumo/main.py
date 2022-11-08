@@ -6,7 +6,7 @@ from sumolib import checkBinary
 
 
 if __name__ == '__main__':
-    CFG_PATH = 'demo/sumo/cracow.sumocfg'
+    CFG_PATH = 'demos/sumo/cracow.sumocfg'
     USE_GUI = True
 
     os.environ['SUMO_HOME'] = '/usr/share/sumo/'
