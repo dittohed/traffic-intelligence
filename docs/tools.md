@@ -5,7 +5,6 @@ optimal traffic control solution characterics obtained with PSO algorithm
 when using micro- and mesoscopic traffic flow simulators under the hood.
 
 # PSO libraries
-TODO: pyswarm, pyswarms, pymoo (need multi-objective optimizer?)
 
 ### PySwarms
 PySwarms is an extensible research toolkit for particle swarm optimization (PSO) in Python.
