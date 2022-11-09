@@ -7,6 +7,19 @@ when using micro- and mesoscopic traffic flow simulators under the hood.
 # PSO libraries
 TODO: pyswarm, pyswarms, pymoo (need multi-objective optimizer?)
 
+### PySwarms
+PySwarms is an extensible research toolkit for particle swarm optimization (PSO) in Python.
+It is intended for swarm intelligence researchers, practitioners, and students who prefer a high-level declarative interface for implementing PSO in their problems.
+PySwarms enables basic optimization with PSO and interaction with swarm optimizations.
+It provides standard optimization techniques for finding the optima of a single objective function for both, continues and discrete search space.
+
+### Pymoo
+Pymoo offers state of the art single- and multi-objective optimization algorithms and many more features related to multi-objective optimization such as visualization and decision making.
+
+### Decision
+PySwarms seems to be the most popular Swarm Optimization library. It offers all off-the-shelf implementations of most swarm intelligence algorithms.
+One of the drawbacks is the fact, that it offers only single objective optimization. In case of multi objective optimization Pymoo seems to be the only option.
+
 # Microscopic simulators
 Simulators of this kind model each vehicle and it's dynamics individually. 
 They provide a detailed simulation at cost of speed. 
