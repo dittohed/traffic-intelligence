@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 sumolib = "*"
 traci = "*"
+pyswarms = "*"
 
 [dev-packages]
 
