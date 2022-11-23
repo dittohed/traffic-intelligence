@@ -15,7 +15,7 @@ loops or preferably cameras).
 a phase for which $score$ is maximized, e.g.: $score = v_{mean} + \alpha t_{mean}$, 
 where each phase must be active for at least $n$ seconds within every $N$ second-long cycle. Phases don't have to be activated in a specified order. The expression can be extended with metrics' polynomials or other 
 metrics.
-* The goal of PSO would be find optimal coefficients used in $score$.
+* The goal of PSO would be to find optimal coefficients used in $score$.
 * Each particle could run a whole simulation or correspond
 to a single junction within a single simulation (up to a dozen of parameters
 to find).
