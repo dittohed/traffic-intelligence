@@ -21,6 +21,7 @@ to a single junction within a single simulation (up to a dozen of parameters
 to find).
 * Alternatively, each junction might have a separate set of coefficients (up
 to a few thousand parameters to find).
+* Some metrics: delay time (sum or mean), v (sum or mean), queue length.
 
 **WARNING!** Such approach is feasible only if MATSim can handle calcuting
 metrics such as $t_{mean}$. If MATSim isn't capable of determining such metrics,
