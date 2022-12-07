@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE network SYSTEM "http://www.matsim.org/files/dtd/network_v1.dtd">
+
+<network name="NAME">
+   <nodes>
+      <node id="1325756433" x="49.99" y="128.20"/>
+      <node id="1470370977" x="0.00" y="151.91"/>
+      <node id="206350619" x="172.32" y="209.32"/>
+      <node id="236164386" x="209.61" y="99.73"/>
+      <node id="236164878" x="269.24" y="81.34"/>
+      <node id="262007334" x="110.19" y="0.00"/>
+      <node id="cluster_206348695_2480489000_262007348_262007350" x="140.86" y="112.19"/>
+   </nodes>
+   <links capperiod="01:00:00">
+      <link id="206880033#0" from="cluster_206348695_2480489000_262007348_262007350" to="1470370977" length="134.49" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="206880045#0" from="cluster_206348695_2480489000_262007348_262007350" to="236164878" length="119.96" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="206880049#0" from="cluster_206348695_2480489000_262007348_262007350" to="206350619" length="86.55" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="206880051#0" from="cluster_206348695_2480489000_262007348_262007350" to="262007334" length="101.10" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="24193276#0" from="206350619" to="cluster_206348695_2480489000_262007348_262007350" length="86.82" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="24193282#0" from="262007334" to="cluster_206348695_2480489000_262007348_262007350" length="100.91" capacity="3600.00" freespeed="13.89" permlanes="2"/>
+      <link id="277424366#0" from="236164386" to="cluster_206348695_2480489000_262007348_262007350" length="57.47" capacity="5400.00" freespeed="13.89" permlanes="3"/>
+      <link id="277424369#0" from="1325756433" to="cluster_206348695_2480489000_262007348_262007350" length="79.93" capacity="5400.00" freespeed="13.89" permlanes="3"/>
+   </links>
+</network>
